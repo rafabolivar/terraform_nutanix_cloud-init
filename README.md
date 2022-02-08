@@ -24,10 +24,10 @@ Inside this repository you'll find the following 4 files:
 
 |File|Description  |
 |--|--|
-|[main.tf](https://github.com/rafabolivar/terraform_karbon/blob/main/main.tf)  | The main configuration file for our deployment |
-|[variables.tf](https://github.com/rafabolivar/terraform_karbon/blob/main/variables.tf)|The variable definition file|
-|[terraform.tfvars](https://github.com/rafabolivar/terraform_karbon/blob/main/terraform.tfvars)  | The variable values that will be used in our deployment |
-|[init.tpl](https://github.com/rafabolivar/terraform_karbon/blob/main/terraform.tfvars)  | The cloud-init script that will configure our VM during the first boot |
+|[main.tf](https://github.com/rafabolivar/terraform_nutanix_cloud-init/blob/main/main.tf)  | The main configuration file for our deployment |
+|[variables.tf](https://github.com/rafabolivar/terraform_nutanix_cloud-init/blob/main/variables.tf)|The variable definition file|
+|[terraform.tfvars](https://github.com/rafabolivar/terraform_nutanix_cloud-init/blob/main/terraform.tfvars)  | The variable values that will be used in our deployment |
+|[init.tpl](https://github.com/rafabolivar/terraform_nutanix_cloud-init/blob/main/init.tpl)  | The cloud-init script that will configure our VM during the first boot |
 
 The variables values are autopopulated by Calm, using the appropiate values from our cluster.
 
