@@ -35,8 +35,9 @@ This variables values must be modified, using the appropiate values from our clu
 
     ncli cluster get-params | grep "Cluster Uuid"
 
-***Network UUID***
-    nutanix@NTNX-21SM6K040170-B-CVM:10.42.91.30:~$ acli net.list
+***Network UUID***  
+    
+    acli net.list
 
 ***Image UUID***
     nutanix@NTNX-21SM6K040170-B-CVM:10.42.91.30:~$ acli image.list
