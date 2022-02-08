@@ -45,7 +45,7 @@ This variables values must be modified, using the appropiate values from our clu
 
 **Important Note:** The network name used for this deployment is Primary. This value can be easily changed in the blueprint to match your requirements.
 
-## Deploying the cluster
+## Deploying the VM
 
 Once you have checked the content of the files, you can proceed deploying the VM. First you'll need to initialise the environment:
 
