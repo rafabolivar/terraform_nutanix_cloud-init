@@ -32,6 +32,11 @@ Inside this repository you'll find the following 4 files:
 This variables values must be modified, using the appropiate values from our cluster. You can do that using Nutanix Rest API or connecting via SSH to one of your CVMs and executing the following commands:
 
 ***Cluster UUID***
+
+    ubuntu@ubuntu:~$ cd /home/ubuntu/terraform
+    nutanix@NTNX-21SM6K040170-B-CVM:10.42.91.30:~$ ncli cluster get-params | grep "Cluster Uuid"
+    ubuntu@ubuntu:~/terraform$ ./terraform init
+    
     nutanix@NTNX-21SM6K040170-B-CVM:10.42.91.30:~$ ncli cluster get-params | grep "Cluster Uuid"
 
 ***Network UUID***
