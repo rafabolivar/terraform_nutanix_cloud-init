@@ -22,3 +22,6 @@ variable "imguuid" {
 variable "netuuid" {
   type = string
 }
+variable "cluuid" {
+  type = string
+}
