@@ -40,7 +40,8 @@ This variables values must be modified, using the appropiate values from our clu
     acli net.list
 
 ***Image UUID***
-    nutanix@NTNX-21SM6K040170-B-CVM:10.42.91.30:~$ acli image.list
+
+    acli image.list
 
 **Important Note:** The network name used for this deployment is Primary. This value can be easily changed in the blueprint to match your requirements.
 
