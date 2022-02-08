@@ -2,11 +2,10 @@
 
 This example shows how to create Virtual Machines, using infrastructure as code with [Terraform](https://www.terraform.io/) and the [Nutanix Provider for Terraform](https://registry.terraform.io/providers/nutanix/nutanix/latest). 
 
-For this purpose, I have developed a [Nutanix Calm](https://www.nutanix.com/products/calm) Blueprint, that automates the creation of a Workstation using an Ubuntu Cloud Image, and then installs Terraform, as well as the Nutanix Provider for Terraform, then it clones this GitHub repository, so everything is ready to deploy a new cluster in a matter of minutes. 
 
 # Prerequisites
 
-We'll need a working Nutanix cluster, with Nutanix Karbon enabled. 
+We'll need a working Nutanix cluster, and Terraform with the Nutanix provider for Terraform installed. 
 
 ## Required data
 
@@ -15,24 +14,13 @@ We need to know the following data about our environment:
  - Password for admin user
  - IP Address of your Prism Central and Prism Element 
 
-# Deployment
+# Using Terraform to deploy a new VM.
 
-Once you clone this GitHub repository, you have to import the blueprint located in the [blueprints](https://github.com/rafabolivar/terraform_karbon/tree/main/blueprints) folder, into your Calm environment. This can be easily done by clicking on the ***Blueprints*** icon on the left bar and selecting ***Upload Blueprint***. If you're asked for a password, use nutanix/4u.
+You can clone this repository with an easy eaxmple.
 
-Then you have to click the ***Launch*** button on the upper right side and change your Prism Central Password, Prism Central  and Prism Element IP Addresses. Then click ***Deploy***, and in a few minutes the Terraform Workstation will be up and running.
+## Terraform files
 
-# Using Terraform to deploy a new K8s Cluster
-
-## Login in the Terraform Workstation
-
-Once the deployment is finished, you can login in the Terraform Workstation via SSH using the following credentials:
-
- - User: ubuntu
- - Password: nutanix/4u
-
-## Karbon cluster deployment files
-
-Inside the path `/home/ubuntu/terraform` you'll find the following 4 files:
+Inside this repository you'll find the following 4 files:
 
 |File|Description  |
 |--|--|
@@ -47,7 +35,7 @@ The variables values are autopopulated by Calm, using the appropiate values from
 
 ## Deploying the cluster
 
-Once you have checked the content of the files, you can proceed deploying the Karbon Cluster. First you'll need to initialise the environment:
+Once you have checked the content of the files, you can proceed deploying the VM. First you'll need to initialise the environment:
 
     ubuntu@ubuntu:~$ cd /home/ubuntu/terraform
     ubuntu@ubuntu:~/terraform$ ./terraform init
@@ -63,7 +51,7 @@ Finally, you can launch your deployment:
 
     ubuntu@ubuntu:~/terraform$ ./terraform apply
 
-Once you execute this command, you can check in Prism Central that a new Virtual Machine is being deployed. By default, the name of the VM will be ***rafa_tf_vm***. This can be easily modified editing the Terraform configuration files.
+Once you execute this command, you can check in Prism Central that a new Virtual Machine is being deployed. By default, the name of the VM will be ***Rafa_TF_VM***. This can be easily modified editing the Terraform configuration files.
 
 # Useful links
 
