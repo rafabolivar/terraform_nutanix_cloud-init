@@ -29,7 +29,16 @@ Inside this repository you'll find the following 4 files:
 |[terraform.tfvars](https://github.com/rafabolivar/terraform_nutanix_cloud-init/blob/main/terraform.tfvars)  | The variable values that will be used in our deployment |
 |[init.tpl](https://github.com/rafabolivar/terraform_nutanix_cloud-init/blob/main/init.tpl)  | The cloud-init script that will configure our VM during the first boot |
 
-The variables values are autopopulated by Calm, using the appropiate values from our cluster.
+This variables values must be modified, using the appropiate values from our cluster. You can do that using Nutanix Rest API or connecting via SSH to one of your CVMs and executing the following commands:
+
+***Cluster UUID***
+    nutanix@NTNX-21SM6K040170-B-CVM:10.42.91.30:~$ ncli cluster get-params | grep "Cluster Uuid"
+
+***Network UUID***
+    nutanix@NTNX-21SM6K040170-B-CVM:10.42.91.30:~$ acli net.list
+
+***Image UUID***
+    nutanix@NTNX-21SM6K040170-B-CVM:10.42.91.30:~$ acli image.list
 
 **Important Note:** The network name used for this deployment is Primary. This value can be easily changed in the blueprint to match your requirements.
 
