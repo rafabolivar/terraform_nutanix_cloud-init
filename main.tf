@@ -36,7 +36,7 @@ resource "nutanix_virtual_machine" "vm" {
   }
 
   disk_list {
-    disk_size_bytes = 10 * 1024 * 1024 * 1024
+    disk_size_bytes = 40 * 1024 * 1024 * 1024
     device_properties {
       device_type = "DISK"
       disk_address = {
